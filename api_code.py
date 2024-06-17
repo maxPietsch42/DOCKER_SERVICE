@@ -60,11 +60,6 @@ def requirements():
     return "fastapi\nuvicorn"
 
 
-@app.get("/doockerrffile", response_class=starlette.responses.PlainTextResponse)
-def dockerfile():
-    return open("Dockerfile", "r").read()
-
-
 @app.get("/source", response_class=starlette.responses.PlainTextResponse)
 def source():
     return open("api_code.py", "r").read()
