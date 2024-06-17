@@ -11,7 +11,7 @@ def root():
 
 
 @app.get("/portainer")
-def read_root():
+def portainer():
     return {"create volume": "sudo docker volume create portainer_data",
             "create portainer": "sudo docker run -d -p 8000:8000 --name portainer "
                                 "--restart=always -v "
